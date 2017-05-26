@@ -1,5 +1,6 @@
 const int ledPin = 13;
 const int ldrPin = A0;
+const int threshold = 800;
 
 
 void setup() {
@@ -11,19 +12,17 @@ void setup() {
 
 void loop() {
   int ldrStatus = analogRead(ldrPin);
+
+
+  if (ldrStatus > threshold) {
+
+    digitalWrite(ledPin, HIGH);
+    delay(ldrStatus);
+  }
+
+  else {
+
+    digitalWrite (ledPin, LOW);
+    delay(ldrStatus);
+  }
 }
-
-if (ldrStatus <=300) {
-
-  digitalWrite(ledPin, HIGH);
-  Serial.println("LDR is DARK, LED is ON");
-}
-
-else{
-
-  digitalWrite (ledPin, LOW);
-  Serial.println("LDR is DARK, LED is ON");
-  
-}
-
- 
