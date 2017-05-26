@@ -6,4 +6,4 @@ Serial.println(sensorValue); under loop
 then random number appears 
 the range of these number is between 200 and 400
 there is no big differences between cover and uncover the LDR
-
+cover blink fast and the number is lower
